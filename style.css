@@ -1,22 +1,22 @@
 /* =========================================
-   VARIABLES
+   COLORS
 ========================================= */
 
 :root {
 
-    --purple: #6d477f;
-    --dark-purple: #40264d;
-    --light-purple: #efe5f3;
-    --soft-purple: #f8f3fa;
+    --wine: #813747;
+    --wine-dark: #632735;
 
-    --gold: #b99658;
-    --gold-light: #d8bd86;
+    --gold: #d7a84f;
+    --gold-light: #edcf88;
+
+    --green: #647c4d;
 
     --white: #ffffff;
-    --cream: #fffdfb;
+    --cream: #fffaf7;
 
-    --text: #403743;
-    --muted: #817584;
+    --text: #4e3840;
+    --muted: #806c72;
 
 }
 
@@ -59,285 +59,88 @@ a {
 
 
 /* =========================================
-   OPENING
+   INVITATION IMAGE
 ========================================= */
 
-.opening {
+.invitation-section {
 
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 9999;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
+    padding: 25px 15px 50px;
 
     background:
-
         radial-gradient(
             circle at center,
             #ffffff 0%,
-            #f7eef9 55%,
-            #ead9ee 100%
+            #fff8f5 70%,
+            #f7e9e7 100%
         );
 
-    transition:
-        opacity 1s ease,
-        visibility 1s ease;
-
 }
 
 
-.opening.hide {
+.invitation-frame {
 
-    opacity: 0;
+    max-width: 850px;
 
-    visibility: hidden;
-
-}
-
-
-.opening-inner {
-
-    padding: 30px;
-
-    animation:
-        openingAnimation 1.4s ease;
-
-}
-
-
-.invited {
-
-    font-size: 10px;
-
-    letter-spacing: 4px;
-
-    color: var(--purple);
-
-    font-weight: 600;
-
-}
-
-
-.small-ornament {
-
-    margin: 25px 0;
-
-    color: var(--gold);
-
-    font-size: 30px;
-
-}
-
-
-.opening h1 {
-
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    font-size:
-        clamp(70px, 15vw, 125px);
-
-    font-weight: 400;
-
-    line-height: .85;
-
-    color: var(--dark-purple);
-
-}
-
-
-.opening h1 span {
-
-    display: block;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 30px;
-
-    margin: 20px 0;
-
-    color: var(--gold);
-
-}
-
-
-.opening-date {
-
-    margin-top: 30px;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 22px;
-
-    letter-spacing: 5px;
-
-    color: var(--purple);
-
-}
-
-
-.open-button {
-
-    margin-top: 45px;
-
-    padding: 15px 28px;
-
-    border: 1px solid var(--gold);
-
-    background: transparent;
-
-    color: var(--purple);
-
-    cursor: pointer;
-
-    font-size: 10px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    transition: .3s;
-
-}
-
-
-.open-button b {
-
-    margin-left: 12px;
-
-}
-
-
-.open-button:hover {
-
-    background: var(--purple);
-
-    color: white;
-
-}
-
-
-/* =========================================
-   FLOWERS
-========================================= */
-
-.flower {
-
-    position: absolute;
-
-    color: var(--purple);
-
-    opacity: .15;
-
-    font-size: 130px;
-
-}
-
-
-.flower-one {
-
-    top: 2%;
-
-    left: 3%;
-
-    transform: rotate(-25deg);
-
-}
-
-
-.flower-two {
-
-    bottom: 4%;
-
-    right: 4%;
-
-    transform: rotate(20deg);
-
-}
-
-
-.flower-three {
-
-    bottom: 12%;
-
-    left: 8%;
-
-    font-size: 80px;
-
-}
-
-
-.flower-four {
-
-    top: 5%;
-
-    right: 4%;
-
-    font-size: 120px;
-
-    opacity: .08;
-
-}
-
-
-/* =========================================
-   MAIN
-========================================= */
-
-.hidden {
-
-    display: none;
-
-}
-
-
-#main {
-
-    animation:
-        pageAppear 1s ease;
-
-}
-
-
-/* =========================================
-   HERO
-========================================= */
-
-.hero {
-
-    min-height: 100svh;
+    margin: auto;
 
     position: relative;
 
-    display: flex;
+    background: white;
 
-    align-items: center;
+    padding: 7px;
 
-    justify-content: center;
+    box-shadow:
+        0 20px 60px
+        rgba(100, 45, 55, 0.12);
 
-    text-align: center;
+}
+
+
+.invitation-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 3px;
+
+    border: 1px solid
+        rgba(215, 168, 79, .45);
+
+    pointer-events: none;
+
+    z-index: 2;
+
+}
+
+
+.invitation-frame img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   DETAILS SECTION
+========================================= */
+
+.details-section {
+
+    position: relative;
+
+    padding: 100px 20px;
 
     background:
 
         radial-gradient(
-            circle at center,
+            circle at center top,
             #ffffff,
-            #f7eff9
+            #fff8f6 70%
         );
 
     overflow: hidden;
@@ -345,167 +148,230 @@ a {
 }
 
 
-.hero::before {
+.section-heading {
 
-    content: "";
+    max-width: 700px;
 
-    position: absolute;
+    margin: 0 auto 55px;
 
-    width: 500px;
-
-    height: 500px;
-
-    border-radius: 50%;
-
-    border: 1px solid
-        rgba(109,71,127,.12);
+    text-align: center;
 
 }
 
 
-.hero-content {
-
-    position: relative;
-
-    z-index: 2;
-
-    padding: 30px;
-
-    max-width: 750px;
-
-}
-
-
-.hero-small {
+.small-title {
 
     font-size: 10px;
 
     letter-spacing: 4px;
 
-    color: var(--purple);
+    color: var(--wine);
 
     font-weight: 600;
 
 }
 
 
-.hero h2 {
+.section-heading h1 {
 
-    margin-top: 25px;
-
-    font-family:
-        "Great Vibes",
-        cursive;
-
-    font-size:
-        clamp(75px, 17vw, 145px);
-
-    font-weight: 400;
-
-    line-height: .85;
-
-    color: var(--dark-purple);
-
-}
-
-
-.hero h2 span {
-
-    display: block;
+    margin-top: 15px;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size: 30px;
+    font-size:
+        clamp(40px, 7vw, 65px);
 
-    margin: 20px 0;
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: var(--wine-dark);
+
+}
+
+
+.ornament {
+
+    margin-top: 20px;
 
     color: var(--gold);
 
-}
-
-
-.line-decoration {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 12px;
-
-    margin: 35px auto;
-
-    color: var(--gold);
+    font-size: 25px;
 
 }
 
 
-.line-decoration span {
+/* =========================================
+   FLORAL DECORATION
+========================================= */
 
-    width: 70px;
+.floral {
 
-    height: 1px;
+    position: absolute;
 
-    background:
-        var(--gold-light);
+    color: var(--green);
+
+    opacity: .08;
+
+    font-size: 200px;
+
+    pointer-events: none;
 
 }
 
 
-.hero-text {
+.flower-left {
 
-    max-width: 480px;
+    top: 20px;
+
+    left: -70px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.flower-right {
+
+    bottom: 80px;
+
+    right: -70px;
+
+    transform: rotate(25deg);
+
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-card {
+
+    position: relative;
+
+    max-width: 600px;
 
     margin: auto;
 
-    color: var(--muted);
+    padding: 55px 25px;
 
-    line-height: 1.9;
+    text-align: center;
 
-    font-size: 14px;
+    background: rgba(255,255,255,.94);
 
-}
+    border: 1px solid
+        rgba(215,168,79,.45);
 
-
-.date-display {
-
-    margin-top: 45px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 20px;
+    box-shadow:
+        0 20px 60px
+        rgba(99,39,53,.09);
 
 }
 
 
-.date-display > div:first-child {
+/* Inner decorative border */
 
-    display: flex;
+.event-card::before {
 
-    flex-direction: column;
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px solid
+        rgba(215,168,79,.2);
+
+    pointer-events: none;
 
 }
 
 
-.date-display small {
+.icon {
+
+    position: relative;
+
+    font-size: 34px;
+
+    color: var(--gold);
+
+}
+
+
+.event-label {
+
+    position: relative;
+
+    margin-top: 18px;
 
     font-size: 9px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    color: var(--purple);
+    color: var(--wine);
+
+    font-weight: 600;
 
 }
 
 
-.date-display strong {
+.event-card h2 {
+
+    position: relative;
+
+    margin-top: 12px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 52px;
+
+    font-weight: 400;
+
+    color: var(--wine);
+
+}
+
+
+.line {
+
+    position: relative;
+
+    width: 50px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 22px auto;
+
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+.date .day {
 
     font-family:
         "Cormorant Garamond",
@@ -513,163 +379,209 @@ a {
 
     font-size: 65px;
 
-    color: var(--purple);
-
     line-height: .8;
+
+    color: var(--wine);
 
 }
 
 
-.month {
+.date div {
 
     text-align: left;
 
     border-left:
-        1px solid var(--gold-light);
+        1px solid var(--gold);
 
-    padding-left: 20px;
+    padding-left: 15px;
 
 }
 
 
-.month span {
+.date strong {
 
     display: block;
 
+    font-size: 13px;
+
     letter-spacing: 3px;
 
-    font-size: 12px;
-
-    color: var(--purple);
+    color: var(--wine);
 
 }
 
 
-.month small {
+.date small {
+
+    display: block;
+
+    margin-top: 3px;
 
     letter-spacing: 2px;
+
+    color: var(--muted);
 
 }
 
 
 /* =========================================
-   EVENTS
+   TIME
 ========================================= */
 
-.event {
+.time {
 
     position: relative;
 
-    padding: 110px 20px;
-
-    text-align: center;
-
-    overflow: hidden;
-
-}
-
-
-.wedding {
-
-    background: var(--white);
-
-}
-
-
-.reception {
-
-    background: var(--soft-purple);
-
-}
-
-
-.section-title p {
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-
-    color: var(--purple);
-
-    font-weight: 600;
-
-}
-
-
-.section-title h2 {
-
-    margin-top: 15px;
+    margin-top: 28px;
 
     font-family:
         "Cormorant Garamond",
         serif;
 
-    font-size:
-        clamp(45px, 8vw, 70px);
+    font-size: 48px;
 
-    font-weight: 500;
-
-    color: var(--dark-purple);
+    color: var(--wine);
 
 }
 
 
-.title-flower {
+/* =========================================
+   VENUE
+========================================= */
 
-    margin-top: 15px;
+.venue {
+
+    position: relative;
+
+    margin-top: 22px;
+
+}
+
+
+.venue h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 34px;
+
+    color: var(--wine-dark);
+
+}
+
+
+.venue p {
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================
+   MAP BUTTON
+========================================= */
+
+.map-button {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+    padding: 15px 23px;
+
+    background: var(--wine);
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+
+}
+
+
+.map-button:hover {
+
+    background: var(--wine-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+.map-button .map-icon {
+
+    font-size: 14px;
+
+}
+
+
+.map-button b {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================
+   RECEPTION
+========================================= */
+
+.reception-heading {
+
+    text-align: center;
+
+    margin: 90px auto 35px;
+
+}
+
+
+.mini-ornament {
 
     color: var(--gold);
 
-    font-size: 22px;
+    font-size: 20px;
+
+    margin-bottom: 15px;
 
 }
 
 
-.event-card {
-
-    max-width: 600px;
-
-    margin: 55px auto 0;
-
-    padding: 55px 25px;
-
-    background: white;
-
-    border: 1px solid
-        rgba(185,150,88,.3);
-
-    box-shadow:
-        0 25px 70px
-        rgba(67,42,78,.08);
-
-}
-
-
-.event-symbol {
-
-    font-size: 32px;
-
-    color: var(--gold);
-
-}
-
-
-.event-date {
-
-    margin-top: 20px;
+.reception-heading p {
 
     font-size: 9px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 
-    color: var(--purple);
+    color: var(--wine);
 
 }
 
 
-.event-card h3 {
+.reception-heading h2 {
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     font-family:
         "Cormorant Garamond",
@@ -679,316 +591,28 @@ a {
 
     font-weight: 500;
 
-    color: var(--purple);
+    color: var(--wine-dark);
 
 }
 
 
-.gold-line {
-
-    width: 45px;
-
-    height: 1px;
-
-    margin: 20px auto;
-
-    background: var(--gold);
-
-}
-
-
-.event-card h4 {
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 34px;
-
-    color: var(--dark-purple);
-
-}
-
-
-.address {
-
-    margin-top: 5px;
-
-    color: var(--muted);
-
-}
-
-
-.location-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 10px;
-
-    margin-top: 30px;
-
-    padding: 14px 22px;
-
-    background: var(--purple);
-
-    color: white;
-
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    transition: .3s;
-
-}
-
-
-.location-button:hover {
-
-    background: var(--dark-purple);
-
-    transform: translateY(-3px);
-
-}
-
-
-.location-button b {
-
-    color: var(--gold-light);
-
-}
-
-
-/* =========================================
-   FLORAL CORNERS
-========================================= */
-
-.floral-corner {
-
-    position: absolute;
-
-    font-size: 150px;
-
-    color: var(--purple);
-
-    opacity: .06;
-
-}
-
-
-.top-left {
-
-    top: -35px;
-
-    left: -25px;
-
-    transform: rotate(-30deg);
-
-}
-
-
-.bottom-right {
-
-    bottom: -40px;
-
-    right: -20px;
-
-    transform: rotate(30deg);
-
-}
-
-
-.top-right {
-
-    top: -35px;
-
-    right: -25px;
-
-}
-
-
-.bottom-left {
-
-    bottom: -40px;
-
-    left: -20px;
-
-}
-
-
-/* =========================================
-   COUNTDOWN
-========================================= */
-
-.countdown-section {
-
-    position: relative;
-
-    padding: 110px 20px;
+.reception-card {
 
     background:
         linear-gradient(
-            135deg,
-            #4b3157,
-            #725181
+            145deg,
+            #ffffff,
+            #fff7f7
         );
-
-    color: white;
-
-    text-align: center;
-
-    overflow: hidden;
-
-}
-
-
-.countdown-content {
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-.countdown-content > p {
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-
-    color: var(--gold-light);
-
-}
-
-
-.countdown-content h2 {
-
-    margin-top: 15px;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size:
-        clamp(42px, 8vw, 65px);
-
-    font-weight: 400;
-
-}
-
-
-.small-line {
-
-    margin: 20px;
-
-    color: var(--gold-light);
-
-}
-
-
-.countdown {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 40px;
-
-}
-
-
-.time-box {
-
-    width: 85px;
-
-    padding: 18px 8px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.25);
-
-    background:
-        rgba(255,255,255,.06);
-
-    backdrop-filter: blur(5px);
-
-}
-
-
-.time-box strong {
-
-    display: block;
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
-    font-size: 38px;
-
-    color: #ffffff;
-
-}
-
-
-.time-box span {
-
-    display: block;
-
-    margin-top: 5px;
-
-    font-size: 7px;
-
-    letter-spacing: 2px;
-
-    color: #dccbe4;
-
-}
-
-
-.countdown-flower {
-
-    position: absolute;
-
-    font-size: 250px;
-
-    color: white;
-
-    opacity: .04;
-
-}
-
-
-.countdown-flower.left {
-
-    left: -70px;
-
-    top: -50px;
-
-}
-
-
-.countdown-flower.right {
-
-    right: -70px;
-
-    bottom: -70px;
 
 }
 
 
 /* =========================================
-   FINAL
+   CLOSING
 ========================================= */
 
-.final {
+.closing-section {
 
     position: relative;
 
@@ -1001,7 +625,7 @@ a {
         radial-gradient(
             circle at center,
             #ffffff,
-            #f5eaf7
+            #f9eeee
         );
 
     overflow: hidden;
@@ -1009,33 +633,33 @@ a {
 }
 
 
-.final-flower {
+.closing-flower {
 
-    color: var(--purple);
+    font-size: 65px;
 
-    opacity: .12;
+    color: var(--wine);
 
-    font-size: 70px;
+    opacity: .18;
 
     margin-bottom: 25px;
 
 }
 
 
-.final > p {
+.closing-section > p {
 
     font-size: 9px;
 
     letter-spacing: 4px;
 
-    color: var(--purple);
+    color: var(--wine);
 
     font-weight: 600;
 
 }
 
 
-.final h2 {
+.closing-section h2 {
 
     margin-top: 20px;
 
@@ -1044,18 +668,18 @@ a {
         serif;
 
     font-size:
-        clamp(45px, 9vw, 75px);
+        clamp(42px, 8vw, 70px);
 
     line-height: 1;
 
     font-weight: 500;
 
-    color: var(--dark-purple);
+    color: var(--wine-dark);
 
 }
 
 
-.final-names {
+.names {
 
     margin-top: 40px;
 
@@ -1065,12 +689,12 @@ a {
 
     font-size: 60px;
 
-    color: var(--purple);
+    color: var(--wine);
 
 }
 
 
-.final-names span {
+.names span {
 
     font-family:
         "Cormorant Garamond",
@@ -1083,9 +707,9 @@ a {
 }
 
 
-.final-date {
+.closing-date {
 
-    margin-top: 15px;
+    margin-top: 12px;
 
     font-size: 10px;
 
@@ -1104,12 +728,11 @@ footer {
 
     padding: 35px 20px;
 
-    background:
-        var(--dark-purple);
-
     text-align: center;
 
-    color: #dfd1e4;
+    background: var(--wine-dark);
+
+    color: #eadbdd;
 
 }
 
@@ -1118,62 +741,18 @@ footer div {
 
     color: var(--gold-light);
 
-    font-size: 20px;
+    font-size: 22px;
 
 }
 
 
 footer p {
 
-    margin-top: 10px;
+    margin-top: 8px;
 
     font-size: 10px;
 
     letter-spacing: 1px;
-
-}
-
-
-/* =========================================
-   ANIMATIONS
-========================================= */
-
-@keyframes openingAnimation {
-
-    from {
-
-        opacity: 0;
-
-        transform:
-            translateY(25px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
-
-@keyframes pageAppear {
-
-    from {
-
-        opacity: 0;
-
-    }
-
-    to {
-
-        opacity: 1;
-
-    }
 
 }
 
@@ -1185,92 +764,103 @@ footer p {
 @media(max-width:600px) {
 
 
-    .opening h1 {
+    .invitation-section {
 
-        font-size: 75px;
-
-    }
-
-
-    .hero h2 {
-
-        font-size: 82px;
+        padding:
+            10px
+            8px
+            35px;
 
     }
 
 
-    .hero::before {
+    .invitation-frame {
 
-        width: 330px;
-
-        height: 330px;
+        padding: 4px;
 
     }
 
 
-    .event {
+    .details-section {
 
-        padding: 80px 18px;
+        padding:
+            75px
+            18px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 40px;
 
     }
 
 
     .event-card {
 
-        padding: 45px 20px;
+        padding:
+            45px
+            18px;
 
     }
 
 
-    .event-card h3 {
+    .event-card h2 {
 
-        font-size: 48px;
+        font-size: 45px;
 
     }
 
 
-    .event-card h4 {
+    .date .day {
+
+        font-size: 55px;
+
+    }
+
+
+    .time {
+
+        font-size: 43px;
+
+    }
+
+
+    .venue h3 {
 
         font-size: 30px;
 
     }
 
 
-    .countdown {
+    .reception-heading {
 
-        gap: 6px;
-
-    }
-
-
-    .time-box {
-
-        width: 70px;
-
-        padding: 14px 5px;
+        margin-top: 70px;
 
     }
 
 
-    .time-box strong {
+    .reception-heading h2 {
 
-        font-size: 29px;
-
-    }
-
-
-    .time-box span {
-
-        font-size: 6px;
+        font-size: 48px;
 
     }
 
 
-    .final-names {
+    .map-button {
 
-        font-size: 52px;
+        width: 90%;
+
+        max-width: 300px;
 
     }
 
+
+    .names {
+
+        font-size: 50px;
+
+    }
 
 }
